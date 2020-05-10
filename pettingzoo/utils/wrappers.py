@@ -245,7 +245,7 @@ class OrderEnforcingWrapper(BaseWrapper):
     def observe(self, agent):
         if not self._has_reset:
             EnvLogger.error_observe_before_reset()
-        return super().observe(observe)
+        return super().observe(agent)
 
     def reset(self, observe=True):
         self._has_reset = True
